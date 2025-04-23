@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kanye Fact Generator</title>
+  <style>
+    body {
+      background-color: #dbeafe;
+      font-family: 'Georgia', serif;
+      color: #000;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #111827;
+    }
+
+    button {
+      background-color: #2563eb;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #1d4ed8;
+    }
+
+    #fact-box {
+      margin-top: 30px;
+      font-size: 18px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Kanye West Fact Generator</h1>
+  <p>Click the button below to learn a random Kanye fact.</p>
+
+  <button onclick="showFact()">Give me a Kanye fact</button>
+
+  <div id="fact-box"></div>
+
+  <script>
+    const facts = [
+      "Kanye West’s debut album *The College Dropout* won a Grammy for Best Rap Album.",
+      "He founded his own record label called GOOD Music in 2004.",
+      "Kanye once released an album exclusively on a $200 music player called the Stem Player.",
+      "He interrupted Taylor Swift's VMA acceptance speech in 2009 — and it became one of pop culture’s most famous moments.",
+      "His 2010 album *My Beautiful Dark Twisted Fantasy* is considered one of the greatest albums of all time.",
+      "Kanye briefly ran for President of the United States in 2020.",
+      "He has over 20 Grammy Awards.",
+      "The song *Runaway* features a 3-minute auto-tuned outro with no lyrics — and it's iconic.",
+      "He collaborated with Jay-Z on the *Watch the Throne* album.",
+      "Kanye designed the Yeezy fashion line, which revolutionized sneakers and streetwear.",
+      "Kanye produced all five albums in GOOD Music’s 2018 summer release schedule, including Pusha T’s *Daytona*.",
+      "He has referred to himself as a creative genius and likened his influence to that of Steve Jobs.",
+      "Kanye dropped out of college to pursue music — inspiring the name of his first album, *The College Dropout*.",
+      "He changed his legal name to just 'Ye' in 2021.",
+      "Kanye’s first big break came when he produced several tracks for Jay-Z’s *The Blueprint* in 2001.",
+      "He released a gospel album called *Jesus Is King*, which won Best Contemporary Christian Music Album.",
+      "Kanye once held a listening party in a stadium where he was living while finishing his album *Donda*.",
+      "His *808s & Heartbreak* album introduced a new sound that heavily influenced artists like Drake and The Weeknd.",
+      "He designed a line of fashion in collaboration with Balenciaga and Adidas.",
+      "Kanye has cited Walt Disney, Picasso, and Elon Musk as inspirations for his creative work."
+    ];
+  
+    function showFact() {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      document.getElementById('fact-box').innerText = facts[randomIndex];
+    }
+  </script>
+  
+
+</body>
+</html>
